@@ -1,0 +1,133 @@
+﻿
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
+<script>
+       $(function () { 
+      count = 0; 
+      wordsArray = ["Anuvaad", "अनुवाद", "அனுவாட்","阿努瓦德","അനുവാദ്"]; 
+      setInterval(function () { 
+        count++; 
+        $("#word").fadeOut(200, function () { 
+          $(this).text(wordsArray[count % wordsArray.length]).fadeIn(200); 
+        }); 
+      }, 2500); 
+        }); 
+</script>
+
+
+<head>
+    <style>
+        body
+                {
+                        background: url("../uploads/bg.png") no-repeat;
+                        background-size: 100% 100%;
+                        background-position:center;
+
+        }
+    </style>
+</head>
+
+
+
+<br/>
+<link rel="stylesheet" href="~/css/style.css" />
+
+<div class="split left">
+    <img id="logo" src="~/uploads/MicrosoftTeams-image (2).png" />
+    <p style="margin-top:0%;margin-left:20%;font-size:60px;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">
+        <span style="color:orange">अnu</span><span style="color:#7d75a6">vad</span>
+    </p>
+    <p style="margin-left:25%;font-size:15px; font-display:block;">Upload Audio File(.WAV)</p>
+    <p style="margin-left:35%;font-size:15px; font-display:block;">And</p>
+    <p style="margin-left:17%;font-size:15px; font-display:block;">Translate your English Audio to Hindi!!</p>
+    <form asp-action="Player" asp-controller="Emotion" method="post" enctype="multipart/form-data" style="padding-left:22%;">
+@*        <label class="form-label" for="customFile">Upload Audio*(.WAV file)</label>
+*@        @*<div class="btn btn-lg btn-primary">
+            Upload
+            <input type="file" name="file" id="UploadFile" value="Upload"/>
+        </div>*@
+        @*
+        <input type="file" name="postedFile"  class="form-control-plaintext" />
+        <br />*@
+       @* <a asp-controller="Home" asp-action="speechTospeech" style="background-color: #7d75a6;color:white; margin-left:10%; margin-top:5%" type="submit" value="Get started" class="btn border-dark rounded">Get started</a>*@
+
+                <form asp-action="Player" asp-controller="Emotion" method="post" enctype="multipart/form-data" style="padding-left:45%;">
+                     <input type="file" name="PostedAudioFile"  class="form-control-plaintext" style="padding-top:0.5rem;padding-bottom: 0rem;margin-top: 4%;"/>
+                       <select class="form-select" id="languages" name="languages" style="width:50%;margin-left: -4%;margin-top: 3%;">
+                                <option>language</option>
+                                <option value="hi">Hindi - हिन्दी</option>
+                                 <option value="bn">Bengali - বাংলা</option>
+                                <option value="mr">Marathi - मराठी</option>
+                                <option value="gu">Gujarati - ગુજરાતી</option>
+                                 <option value="ne">Nepali - नेपाली</option>
+                                 <option value="or">Oriya - ଓଡ଼ିଆ</option>
+                                <option value="ta">Tamil - தமிழ்</option>
+                                <option value="te">Telugu - తెలుగు</option>
+                                <option value="si">Sinhala - සිංහල</option>
+                            </select>
+                    <br />
+                    <input style="background-color: #7d75a6;color:white;margin-left:10%; margin-top:0%" type="submit" value="Upload" class="btn border-dark rounded"/>
+                </form>
+            
+
+    </form>
+
+                 @if (ViewBag.Data != null)
+                    {
+                       @* <div class="Player" style="margin-top:2%;margin-left:14%">
+                            <audio controls autobuffer="autobuffer" style="/*margin-right: 40%;*/">
+                            <source src='@ViewBag.Data' />
+                            </audio>
+                            <select class="form-select" id="languages" name="languages" style="width:50%;margin-left:4%">
+                                <option>language</option>
+                                <option value="hi">Hindi - हिन्दी</option>
+                               <option value="zh">Chinese - 中文</option>
+                                <option value="mr">Marathi - मराठी</option>
+                                <option value="ml">Malayalam - മലയാളം</option>
+                                 <option value="pa">Punjabi - ਪੰਜਾਬੀ</option>
+                                <option value="ta">Tamil - தமிழ்</option>
+                                <option value="te">Telugu - తెలుగు</option>
+                            </select>
+                        </div>
+                            <a asp-action="Player" asp-controller="Home" asp-route-id="@ViewBag.Data" style="background-color: #7d75a6;color:white;margin-left: 31%; margin-top: 1%;" type="submit" value="Upload" class="btn border-dark rounded">Proceed</a>*@
+                    
+                        
+
+                       @* <form asp-action="Player" asp-controller="Home" method="post" enctype="multipart/form-data" style="padding-left:45%;">
+                             <audio controls autobuffer="autobuffer" name="postedFile" style="/*margin-right: 40%;*/">
+                                <source src='@ViewBag.Data' />
+                            </audio>
+                            <input type="file" hidden name="postedFile"  class="form-control-plaintext" style="padding-top:0.5rem;padding-bottom: 0rem;margin-top: 4%;"/>
+
+                            <select class="form-select" id="languages" name="languages" style="width:50%;margin-left:4%">
+                                <option>language</option>
+                                <option value="hi">Hindi - हिन्दी</option>
+                               <option value="zh">Chinese - 中文</option>
+                                <option value="mr">Marathi - मराठी</option>
+                                <option value="ml">Malayalam - മലയാളം</option>
+                                 <option value="pa">Punjabi - ਪੰਜਾਬੀ</option>
+                                <option value="ta">Tamil - தமிழ்</option>
+                                <option value="te">Telugu - తెలుగు</option>
+                            </select>
+                            <button style="background-color: #7d75a6;color:white;margin-left: 31%; margin-top: 1%;" type="submit" value="Upload" class="btn border-dark rounded">Proceed</button>
+                        </form>*@
+                        
+                        
+                        }
+
+                    
+
+
+</div>
+
+ <div class="split right">
+     @*<img style="width:40%" src="~/uploads/phn.jfif"/>*@
+     <div class="rectangle" style="-webkit-box-shadow: 0px 1px 22px rgb(30, 30, 30);">
+                <div style="margin-top: 37%; text-align: center;">
+                    <p id="word" style="font-size:larger;font-weight:bold;color:white">Anuvaad</p>
+                </div>
+         <img id="phone" src="~/uploads/microphone-342.svg" />
+          <img id="wave" src="~/uploads/digital-wave-audio.svg" />
+         @*<img id="wave" src="~/uploads/wave.jfif" />*@
+     </div>
+ </div>

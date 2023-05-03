@@ -1,0 +1,18 @@
+﻿
+.split {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    z-index: -2;
+    margin-top: -26px;
+}
+
+ 
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}

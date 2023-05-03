@@ -1,0 +1,57 @@
+﻿
+    <form asp-action="Player" asp-controller="Emotion" method="post" enctype="multipart/form-data" style="padding-left:45%;">
+         <input type="file" name="postedFile"  class="form-control-plaintext" style="padding-top:0.5rem;padding-bottom: 0rem;margin-top: 4%;"/>
+        <br />
+        <input style="background-color: #7d75a6;color:white; margin-left:10%; margin-top:0%" type="submit" value="Upload" class="btn border-dark rounded"/>
+    </form>
+
+    <div class="d-flex ">
+
+                @if (ViewBag.Data != null)
+                    {
+                        <hr />
+                        <audio controls autobuffer="autobuffer" style="/*margin-right: 40%;*/">
+                        <source src='@ViewBag.Data' />
+                        </audio>
+                    }
+
+                <div class ="col-lg shadow-textarea" style="margin-left:20%">
+    
+                    <textarea rows="8" cols="50" name="text" id="textArea">@ViewBag.Text</textarea>
+                </div>
+    </div>
+
+    <div class="d-flex">
+
+                 <div class ="col-lg shadow-textarea" style="margin-left:20%">
+    
+                    <textarea rows="8" cols="50" name="text" id="textArea">@ViewBag.translatedText</textarea>
+                </div>
+
+            @if (ViewBag.OutputAudio != null)
+                {
+                    <hr />
+                    <audio controls autobuffer="autobuffer" style="margin-left:-25%" >
+                        <source src='@ViewBag.OutputAudio' />
+                      </audio>
+                }
+        
+
+
+
+    </div>
+
+
+                 @if (ViewBag.ClonedAudio != null)
+                {
+                    <hr />
+                        <audio controls autobuffer="autobuffer" style="/*margin-right: 40%;*/">
+                        <source src='@ViewBag.ClonedAudio' />
+                        </audio>
+                }
+
+
+
+
+
+

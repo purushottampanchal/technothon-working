@@ -1,0 +1,37 @@
+﻿
+.container-audio {
+    width: 66%;
+    height: auto;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #eee;
+    color: #444;
+    margin: 20px auto;
+    overflow: hidden;
+    border-color:orange;
+}
+
+audio {
+    width: 100%;
+}
+
+    audio:nth-child(2), audio:nth-child(4), audio:nth-child(6) {
+        margin: 0;
+    }
+
+.container-audio .colum1 {
+    width: 23px;
+    height: 5em;
+    border-radius: 5px;
+    margin: 0 10px 0 0;
+    display: inline-block;
+    position: relative;
+    border-color: orange;
+}
+
+    .container-audio .colum1:last-child {
+        margin: 0;
+    }
+
+   
+

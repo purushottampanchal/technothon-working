@@ -1,0 +1,92 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = anuvadha
+build_property.RootNamespace = anuvadha
+build_property.ProjectDir = C:\Users\purushottam_panchal\source\Workspaces\Anuvaad\anuvadha\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\purushottam_panchal\source\Workspaces\Anuvaad\anuvadha
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/purushottam_panchal/source/Workspaces/Anuvaad/anuvadha/Views/Emotion/Dummy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1vdGlvblxEdW1teS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/purushottam_panchal/source/Workspaces/Anuvaad/anuvadha/Views/Emotion/Dummy2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1vdGlvblxEdW1teTIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/purushottam_panchal/source/Workspaces/Anuvaad/anuvadha/Views/Emotion/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1vdGlvblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/purushottam_panchal/source/Workspaces/Anuvaad/anuvadha/Views/Emotion/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1vdGlvblxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/purushottam_panchal/source/Workspaces/Anuvaad/anuvadha/Views/Emotion/speechTospeech.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1vdGlvblxzcGVlY2hUb3NwZWVjaC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/purushottam_panchal/source/Workspaces/Anuvaad/anuvadha/Views/Emotion/temp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1vdGlvblx0ZW1wLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/purushottam_panchal/source/Workspaces/Anuvaad/anuvadha/Views/Emotion/textToText.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1vdGlvblx0ZXh0VG9UZXh0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/purushottam_panchal/source/Workspaces/Anuvaad/anuvadha/Views/Home/Dummy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEdW1teS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/purushottam_panchal/source/Workspaces/Anuvaad/anuvadha/Views/Home/Dummy2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEdW1teTIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/purushottam_panchal/source/Workspaces/Anuvaad/anuvadha/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/purushottam_panchal/source/Workspaces/Anuvaad/anuvadha/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/purushottam_panchal/source/Workspaces/Anuvaad/anuvadha/Views/Home/speechTospeech.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxzcGVlY2hUb3NwZWVjaC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/purushottam_panchal/source/Workspaces/Anuvaad/anuvadha/Views/Home/temp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVx0ZW1wLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/purushottam_panchal/source/Workspaces/Anuvaad/anuvadha/Views/Home/textToText.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVx0ZXh0VG9UZXh0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/purushottam_panchal/source/Workspaces/Anuvaad/anuvadha/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/purushottam_panchal/source/Workspaces/Anuvaad/anuvadha/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/purushottam_panchal/source/Workspaces/Anuvaad/anuvadha/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/purushottam_panchal/source/Workspaces/Anuvaad/anuvadha/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/purushottam_panchal/source/Workspaces/Anuvaad/anuvadha/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-ivvmf6nwmm

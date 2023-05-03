@@ -1,0 +1,109 @@
+﻿
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.split {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    z-index: -2;
+    margin-top: -26px;
+}
+
+ 
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+   /* .right img {
+        min-width: 40%;
+    }
+*/
+
+#phone {
+    min-width: 7% !important;
+    height: 10%;
+    width: 7% !important;
+    margin-top: 15%;
+    margin-left: 14%;
+}
+
+#UploadFile {
+    position: relative;
+    opacity: 0;
+    font-size: 0%;
+    right: 0;
+    top: 0;
+}
+
+
+
+
+#logo {
+    width: 30%;
+    margin-left: 25%;
+    margin-top: 4%;
+    background-blend-mode: lighten;
+}
+
+#wave {
+    min-width: 17% !important;
+    height: 16%;
+    width: 7% !important;
+    margin-top: 24%;
+    margin-left: 9%;
+}
+
+p {
+    margin-bottom: 0.2rem;
+}
+
+.form-control-plaintext {
+    padding-top: 1.5rem;
+    padding-bottom: 0rem;
+}
+
+.right .rectangle {
+    height: 70%;
+    width: 35%;
+    border-color: #7d75a6;
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 14px;
+    margin-left: 40%;
+    margin-top: 10%;
+}
+
+.con{
+    height:100%;
+    width:100%;
+}
+
+#square {
+    height: 30%;
+    width: 30%;
+    border-radius: 14px;
+
+}

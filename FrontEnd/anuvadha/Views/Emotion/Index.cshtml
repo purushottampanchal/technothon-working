@@ -1,0 +1,292 @@
+﻿
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="~/css/style.css" />
+
+
+@*
+
+
+Emotions
+
+*@
+
+<script>
+            $(document).ready(function () {
+                function handleFiles(event) {
+                    var files = event.target.files;
+                    $("#src").attr("src", URL.createObjectURL(files[0]));
+                    document.getElementById("audio").load();
+                }
+
+        document.getElementById("upload").addEventListener("change", handleFiles, false);
+
+                //let chartel = document.getElementById("chart")
+                //let chartBars = document.querySelectorAll("#chart .bar")
+
+                // // PY Range Function In JS
+                //function range(start, stop, step) {
+                //    if (typeof stop == 'undefined') {
+                //        stop = start;
+                //        start = 0;
+                //    }
+                //    if (typeof step == 'undefined') {
+                //        step = 1;
+                //    }
+                //    if ((step > 0 && start >= stop) || (step < 0 && start <= stop)) {
+                //        return [];
+                //    }
+                //    var result = [];
+                //    for (var i = start; step > 0 ? i < stop : i > stop; i += step) {
+                //        result.push(i);
+                //    }
+                //    return result;
+                //};
+
+                //function chartAnim() {
+                //    var heightAmounts = []
+
+                //    console.log(heightAmounts)
+
+                //    for (i in range(chartBars.length)) {
+                //        heightAmounts.push(Math.random() * chartel.offsetHeight)
+                //    }
+
+                //    var heightIndex = 0
+                //    chartBars.forEach(element => {
+                //        element.style.height = heightAmounts[heightIndex] + "px"
+                //        heightIndex = heightIndex + 1
+                //    });
+                //}
+
+                //setInterval(() => chartAnim(), 450)
+
+        $(function () {
+            count = 0;
+            wordsArray = ["Anuvaad", "अनुवाद", "அனுவாட்","അനുവാദ്"];
+            setInterval(function () {
+                count++;
+                $("#word").fadeOut(200, function () {
+                    $(this).text(wordsArray[count % wordsArray.length]).fadeIn(200);
+                });
+            }, 2500);
+        });
+
+
+        setInterval(function () {
+        $.ajax({
+                    url: '@Url.Action("getStatus")',
+                    success: function (result) {
+                        console.log(result)
+                        $("#progress-status").html(result);
+
+                    }
+                });
+
+    }, 300);});
+
+</script>
+
+<br>
+
+<head>
+    <style>
+        body {
+            background: url("../uploads/bg.png") no-repeat;
+            background-size: 100% 100%;
+            background-position: center;
+        }
+
+
+        /*    .chart {
+                                    width: 97%;
+                                    height: 90%;
+                                    display: flex;
+                                    align-items: flex-end;
+                                    justify-content: center;
+                                }
+
+                                    .chart .bar {
+                                        transition: 0.4s;
+                                        display: inline-block;
+                                        width: 100px;
+                                        border-radius: 0px 0px 0 0;
+                                        background-color: #121221;
+                                        box-shadow: 0px 0px 44px 30px rgba(255,255,255,0.05);
+                                        transition-duration: 0.5s;
+                                    }*/
+    </style>
+</head>
+
+
+
+<br />
+<link rel="stylesheet" href="~/css/style.css" />
+
+
+<div class="split left">
+    <img id="logo" src="~/uploads/MicrosoftTeams-image (2).png" />
+    <p style="margin-top:0%;margin-left:20%;font-size:60px;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">
+        <span style="color:orange">अnu</span><span style="color:#7d75a6">vaad</span>
+    </p>
+    <p style="margin-left:25%;font-size:15px; font-display:block;">Upload Audio File(.WAV)</p>
+    @*<p style="margin-left:35%;font-size:15px; font-display:block;">And</p>*@
+    @*<p style="margin-left:17%;font-size:15px; font-display:block;">Translate your English Audio to Hindi!!</p>*@
+
+
+    <form asp-action="Player" asp-controller="Emotion" method="post" enctype="multipart/form-data" style="padding-left:22%;">
+
+        <form asp-action="Player" asp-controller="Emotion" method="post" enctype="multipart/form-data" style="padding-left:45%;">
+
+
+            <input type="file" id="upload" name="PostedAudioFile"
+                   accept="audio/wav,"
+                   class="form-control-plaintext" style="padding-top:0.5rem;padding-bottom: 0rem;margin-top: 2%;" />
+
+            <p>
+
+                <audio id="audio" style="
+    width: 50%;
+    margin-left: -4%;
+    margin-top: 3%;
+" controls>
+                    <source src="" id="src" />
+                </audio>
+
+            </p>
+            <select class="form-select" id="languages" name="languages" style="width:50%;margin-left: -4%;margin-top: 3%;">
+                @*<option>language</option>*@
+                <option value="hi">Hindi - हिन्दी</option>
+                <option value="bn">Bengali - বাংলা</option>
+                <option value="mr">Marathi - मराठी</option>
+                <option value="gu">Gujarati - ગુજરાતી</option>
+                <option value="ne">Nepali - नेपाली</option>
+                <option value="or">Oriya - ଓଡ଼ିଆ</option>
+                <option value="ta">Tamil - தமிழ்</option>
+                <option value="te">Telugu - తెలుగు</option>
+                <option value="si">Sinhala - සිංහල</option>
+            </select>
+            <br />
+            <input style="background-color: #7d75a6;
+                            color:white;
+                            margin-left: -4%;
+                            margin-top:0%;
+                            width: 50%;
+                            border: none;
+                            "
+                   type="submit" value="Upload"
+                   class="btn border-dark rounded"
+                   data-toggle="modal" data-target="#LoadingModel" />
+        </form>
+
+    </form>
+
+</div>
+
+<div class="split right" style="margin-top:-68px !important">
+    <img src="https://mobimg.b-cdn.net/v3/fetch/48/48e70c72538a63e6fb606152adc7cd17.jpeg?h=1000" />
+
+    @*<div class="rectangle" style="-webkit-box-shadow: 0px 1px 22px rgb(30, 30, 30);">
+        <div style="margin-top: 37%; text-align: center;">
+        <p id="word" style="font-size:larger;font-weight:bold;color:white">Anuvaad</p>
+        </div>
+        <img id="phone" src="~/uploads/microphone-342.svg" />
+        <img id="wave" src="~/uploads/digital-wave-audio.svg" />*@
+
+</div>
+ </div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade show" data-backdrop="static" data-keyboard="false" id="LoadingModel"
+     tabindex="-1" role="dialog" aria-labelledby="LoadingModel">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content"
+             style="
+                position: absolute;
+                height: 80%;
+            ">
+            <div class="modal-body" style="
+                display: flex;
+                align-content: center;
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            ">
+
+                @*      <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>*@
+
+
+                @* <div id="chart" class="chart">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    </div>*@
+
+
+                <div class="page-container">
+                    <div class="wave-container">
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <div class="text-nowrap text-center" id="progress-status" style="width: 100%;color: black;font-weight: bold;font-size: 1.2rem;">
+                    Loading
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
